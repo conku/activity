@@ -9,12 +9,12 @@ import (
 	"net/url"
 	"testing"
 
+	"github.com/conku/admin"
+	"github.com/conku/l10n"
+	"github.com/conku/qor"
+	"github.com/conku/qor/test/utils"
+	"github.com/conku/roles"
 	"github.com/jinzhu/gorm"
-	"github.com/qor/admin"
-	"github.com/qor/l10n"
-	"github.com/qor/qor"
-	"github.com/qor/qor/test/utils"
-	"github.com/qor/roles"
 	"github.com/theplant/testingutils"
 )
 

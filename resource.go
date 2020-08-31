@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/conku/admin"
 	"github.com/jinzhu/gorm"
-	"github.com/qor/admin"
 )
 
 func prepareGetActivitiesDB(context *admin.Context, result interface{}, types ...string) *gorm.DB {

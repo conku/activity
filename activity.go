@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/conku/admin"
+	"github.com/conku/audited"
+	"github.com/conku/media/asset_manager"
+	"github.com/conku/qor"
+	"github.com/conku/qor/resource"
+	"github.com/conku/qor/utils"
+	"github.com/conku/validations"
 	"github.com/jinzhu/gorm"
-	"github.com/qor/admin"
-	"github.com/qor/audited"
-	"github.com/qor/media/asset_manager"
-	"github.com/qor/qor"
-	"github.com/qor/qor/resource"
-	"github.com/qor/qor/utils"
-	"github.com/qor/validations"
 )
 
 // QorActivity default model used to save resource's activities
@@ -75,7 +75,7 @@ func Register(res *admin.Resource) {
 		})
 	}
 
-	res.GetAdmin().RegisterViewPath("github.com/qor/activity/views")
+	res.GetAdmin().RegisterViewPath("github.com/conku/activity/views")
 	res.UseTheme("activity")
 
 	qorAdmin.RegisterFuncMap("activity_resource", func() *admin.Resource {
