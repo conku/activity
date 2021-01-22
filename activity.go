@@ -3,6 +3,7 @@ package activity
 import (
 	"fmt"
 	"strings"
+	"time"
 
 	"github.com/conku/admin"
 	"github.com/conku/audited"
@@ -47,7 +48,7 @@ func Register(res *admin.Resource) {
 			return activityResource.GetAdmin().T(ctx, "activity."+act.Action, act.Action)
 		}})
 		activityResource.Meta(&admin.Meta{Name: "UpdatedAt", Type: "hidden", Valuer: func(value interface{}, ctx *qor.Context) interface{} {
-			return utils.FormatTime(value.(*QorActivity).UpdatedAt, "Jan 2 15:04", ctx)
+			return utils.FormatTime(time.Unix(value.(*QorActivity).UpdatedAt, 0), "Jan 2 15:04", ctx)
 		}})
 		activityResource.Meta(&admin.Meta{Name: "URL", Valuer: func(value interface{}, ctx *qor.Context) interface{} {
 			return fmt.Sprintf("/admin/%v/%v/!%v/%v/edit", res.ToParam(), res.GetPrimaryValue(ctx.Request), activityResource.ToParam(), value.(*QorActivity).ID)
