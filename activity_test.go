@@ -10,11 +10,11 @@ import (
 	"testing"
 
 	"github.com/conku/admin"
+	"github.com/conku/gorm"
 	"github.com/conku/l10n"
 	"github.com/conku/qor"
 	"github.com/conku/qor/test/utils"
 	"github.com/conku/roles"
-	"github.com/jinzhu/gorm"
 	"github.com/theplant/testingutils"
 )
 

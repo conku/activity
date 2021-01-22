@@ -6,12 +6,12 @@ import (
 
 	"github.com/conku/admin"
 	"github.com/conku/audited"
+	"github.com/conku/gorm"
 	"github.com/conku/media/asset_manager"
 	"github.com/conku/qor"
 	"github.com/conku/qor/resource"
 	"github.com/conku/qor/utils"
 	"github.com/conku/validations"
-	"github.com/jinzhu/gorm"
 )
 
 // QorActivity default model used to save resource's activities
